@@ -148,23 +148,23 @@ function Hero() {
         <Container>
           <div
             dir={isRTL ? "rtl" : "ltr"}
-            className="relative grid min-h-[60vh] lg:min-h-[75vh] grid-cols-1 items-center lg:grid-cols-2 gap-8 lg:gap-12"
+            className={`relative grid min-h-[60vh] lg:min-h-[75vh] grid-cols-1 items-center gap-8 lg:gap-12 ${isRTL ? "lg:grid-cols-[55%_45%]" : "lg:grid-cols-2"
+              }`}
           >
             {/* ── TEXT COLUMN ── */}
             <div
-              className={`relative z-10 flex flex-col items-start gap-5 lg:gap-6 en:max-md:gap-3 py-12 lg:py-0 ${
-                isRTL ? "text-right" : "text-left"
-              }`}
+              className={`relative z-10 flex flex-col items-start gap-5 lg:gap-6 en:max-md:gap-3 py-12 lg:py-0 ${isRTL ? "text-right" : "text-left"
+                }`}
             >
               {/* Trust badge */}
-              <div className="inline-flex items-center gap-2 en:max-md:gap-2 rounded-full border border-emerald-200 bg-white/90 px-4 en:max-md:px-4 py-1.5 en:max-md:py-1.5 text-[30px] lg:text-[20px] en:max-md:text-[13.5px] font-bold en:max-md:font-extrabold text-emerald-600 shadow-sm backdrop-blur-sm animate-fade-in en:max-md:leading-tight en:max-md:max-w-full">
-                <ShieldCheck className="w-[45px] h-[45px] en:max-md:w-[18px] en:max-md:h-[18px] flex-shrink-0" strokeWidth={2.5} />
+              <div className="inline-flex items-center gap-2 en:max-md:gap-2 max-md:max-w-[calc(100vw-24px)] en:max-md:max-w-full max-md:whitespace-nowrap en:max-md:whitespace-normal rounded-full border border-emerald-200 bg-white/90 px-4 en:max-md:px-4 py-1.5 en:max-md:py-1.5 text-[clamp(15px,4.5vw,22px)] sm:text-[30px] lg:text-[20px] en:max-md:text-[13.5px] font-bold en:max-md:font-extrabold text-emerald-600 shadow-sm backdrop-blur-sm animate-fade-in en:max-md:leading-tight">
+                <ShieldCheck className="w-[45px] h-[45px] max-md:w-[32px] max-md:h-[32px] en:max-md:w-[18px] en:max-md:h-[18px] flex-shrink-0" strokeWidth={2.5} />
                 <span className="en:max-md:text-center en:max-md:flex-1">{t.hero.trustBadge}</span>
               </div>
 
               {/* Headline */}
               <div className="animate-fade-up delay-100 mt-2">
-                <h1 className="text-[38px] sm:text-[44px] lg:text-[48px] 2xl:text-[64px] en:text-[34px] en:lg:text-[42px] en:2xl:text-[54px] font-black leading-[1.3] lg:leading-[1.5] text-[#0c2340] lg:whitespace-nowrap en:lg:whitespace-normal tracking-tight">
+                <h1 className="text-[38px] sm:text-[44px] lg:text-[48px] 2xl:text-[64px] en:text-[34px] en:lg:text-[42px] en:2xl:text-[54px] font-black leading-[1.3] lg:leading-[1.5] text-[#0c2340] en:lg:whitespace-normal tracking-tight">
                   <span className="text-[#c92525]">{t.hero.headlineAccent}</span>{" "}
                   {t.hero.headline}
                 </h1>
@@ -233,13 +233,14 @@ function Hero() {
               <div
                 className="relative z-0 overflow-hidden shadow-2xl shadow-blue-900/15"
                 style={{
-                  width: "78%",
+                  width: "85%",
+                  maxWidth: "580px",
                   height: "70vh",
                   maxHeight: "665px",
                   borderRadius: "50% / 42%",
                   border: "10px solid white",
                   marginRight: "auto",
-                  marginLeft: "2%",
+                  marginLeft: "auto",
                 }}
               >
                 <img
