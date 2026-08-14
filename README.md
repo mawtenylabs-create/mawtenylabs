@@ -1,75 +1,166 @@
-# React + TypeScript + Vite
+# Mawtini Medical Labs | مختبرات موطني الطبي
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive bilingual website for **Mawtini Medical Labs**, built to provide patients with a clear, trustworthy, and accessible digital experience.
 
-Currently, two official plugins are available:
+The website presents the laboratory's services, branches, patient guidance, health education, contact channels, and laboratory information in a professional healthcare-oriented interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🌐 Live Website
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**https://mawtenylab.com**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Overview
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Mawtini Medical Labs is a modern healthcare website focused on:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Building trust with patients
+- Presenting laboratory services clearly
+- Providing branch and contact information
+- Guiding patients before and after laboratory tests
+- Providing health education content
+- Supporting Arabic and English languages
+- Delivering a responsive experience across desktop, tablet, and mobile devices
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The website was designed with a strong focus on **clarity, accessibility, performance, responsiveness, and healthcare-specific UX**.
 
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Bilingual Experience
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Arabic and English language support
+- Dynamic RTL/LTR layout switching
+- Professional medical English localization
+- Persistent language selection
+- Language-specific responsive adjustments
 
-```
+### Hero Section
+
+- Professional medical laboratory presentation
+- Primary booking CTA
+- Branch navigation
+- Trust statement
+- Animated laboratory statistics
+- Responsive desktop and mobile layouts
+
+### Laboratory Services
+
+The website presents a comprehensive range of laboratory services, including:
+
+- Blood Tests
+- Diabetes Testing
+- Fertility Tests
+- Maternal & Pediatric Tests
+- Hematology
+- Heart Health
+- Liver, Kidney & Pancreatic Tests
+- Allergy Testing
+- Viral Testing
+- Gastrointestinal Testing
+- Hormone Testing
+- Vitamin Testing
+- Tumor Markers
+- Bone & Rheumatology Testing
+- Immunology & Autoimmune Testing
+- Skin & Hair Testing
+- Microbiological Culture Testing
+
+### Branches
+
+Current branches include:
+
+- Safa Branch
+- Khirbet Al-Misbah Branch
+
+Branch information includes:
+
+- Address
+- Working hours
+- Phone numbers
+- Direct call actions
+
+### Patient Guide
+
+A dedicated patient journey section covering:
+
+- Importance of regular testing
+- Preparation before sample collection
+- Result timing
+- Laboratory pricing information
+- Complaints and suggestions
+
+### Health Education
+
+Health awareness content covering topics such as:
+
+- Diabetes screening
+- Healthy blood pressure
+- Preventive medical checkups
+
+### Gallery
+
+A professional laboratory gallery showcasing:
+
+- Laboratory environment
+- Equipment
+- Facilities
+- Patient-facing areas
+
+### Contact
+
+Direct communication channels including:
+
+- WhatsApp booking
+- Email
+- Facebook
+
+### Responsive Design
+
+Dedicated responsive behavior for:
+
+- Desktop
+- Tablet
+- Mobile
+
+Arabic and English layouts are independently optimized where necessary to prevent text collisions and layout issues.
+
+---
+
+## 🛠️ Tech Stack
+
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS v4**
+- **Lucide React**
+- **React Context API**
+- Modern responsive CSS
+- CSS animations and micro-interactions
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── components/
+│   ├── layout/
+│   ├── sections/
+│   └── ui/
+│
+├── context/
+│   └── LanguageContext.tsx
+│
+├── pages/
+│
+├── assets/
+│
+├── data/
+│
+├── App.tsx
+├── main.tsx
+└── ...
